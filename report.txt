@@ -1,0 +1,26 @@
+Project: Flipkart Grocery - Student Project
+
+1. Abstract
+This project is a simple grocery web application built using Python Flask and SQLite. It demonstrates product listing, cart functionality, orders, admin product management and simple analytics.
+
+2. Tools & Technologies
+- Python, Flask, SQLite, Matplotlib, HTML/CSS
+
+3. Modules
+- Product listing
+- Add to cart / update cart
+- Checkout and orders storage
+- Admin: add products
+- Analytics: product-wise sold chart
+
+4. Implementation
+Explain code files, database schema (products, orders, order_items), and routes.
+
+5. Results
+Show screenshots and analytics chart (product-wise sold quantities).
+
+6. Future Scope
+- User login & authentication
+- Payment gateway integration
+- Better UI with Bootstrap
+- Deploy on cloud with SSL
