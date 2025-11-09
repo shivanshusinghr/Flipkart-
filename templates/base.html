@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flipkart Grocery</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Flipkart Grocery</h1>
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/admin">Admin</a> |
+    <a href="/cart">Cart ({{ cart_count }})</a> |
+    <a href="/orders">Orders</a> |
+    <a href="/analytics">Analytics</a> |
+    <a href="/help">Help</a>
+  </nav>
+</header>
+<hr>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="messages">
+    {% for m in messages %}
+      <li>{{ m }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<main>
+  {% block content %}{% endblock %}
+</main>
+<footer>Demo app for college project.</footer>
+</body>
+</html>
