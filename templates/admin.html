@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin - Products</h2>
+<table>
+<tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th></tr>
+{% for p in products %}
+<tr><td>{{ p['id'] }}</td><td>{{ p['name'] }}</td><td>{{ p['category'] }}</td><td>₹{{ p['price'] }}</td><td>{{ p['stock'] }}</td></tr>
+{% endfor %}
+</table>
+<hr>
+<h3>Add Product</h3>
+<form method="post">
+  Name: <input name="name" required>
+  Category: <input name="category">
+  Price: <input name="price" type="number" step="0.01" required>
+  Stock: <input name="stock" type="number" value="10">
+  <button class="btn" type="submit">Add</button>
+</form>
+{% endblock %}
